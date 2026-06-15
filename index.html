@@ -7,441 +7,432 @@
   <title>Proyecto Individual Multimedia - Ronaldo Charca Condori</title>
 
   <style>
-:root {
-  --azul-oscuro: #0f172a;
-  --azul: #2563eb;
-  --celeste: #38bdf8;
-  --verde: #16a34a;
-  --naranja: #f59e0b;
-  --morado: #7c3aed;
-  --fondo: #f1f5f9;
-  --texto: #1e293b;
-  --gris: #64748b;
-  --borde: #dbe3ef;
-  --sombra: 0 12px 30px rgba(15, 23, 42, 0.12);
-}
+    :root {
+      --azul-oscuro: #0f172a;
+      --azul: #2563eb;
+      --celeste: #38bdf8;
+      --verde: #16a34a;
+      --naranja: #f59e0b;
+      --morado: #7c3aed;
+      --rojo: #dc2626;
+      --gris: #64748b;
+      --fondo: #f1f5f9;
+      --texto: #1e293b;
+      --borde: #dbe3ef;
+      --sombra: 0 12px 30px rgba(15, 23, 42, 0.12);
+    }
 
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--fondo);
-  color: var(--texto);
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+    }
 
-/* PORTADA */
-header {
-  min-height: 58vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 70px 24px;
-  color: white;
-  background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(37, 99, 235, 0.78)),
-    url("img/image1.png");
-  background-size: cover;
-  background-position: center;
-}
+    header {
+      min-height: 58vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 24px;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(37, 99, 235, 0.78)),
+        url("img/image1.png");
+      background-size: cover;
+      background-position: center;
+    }
 
-header::after {
-  display: none;
-}
+    .hero {
+      max-width: 950px;
+    }
 
-.hero {
-  max-width: 950px;
-}
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #e0f2fe;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
 
-.badge {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #e0f2fe;
-  font-weight: bold;
-  margin-bottom: 18px;
-}
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.05;
+    }
 
-h1 {
-  margin: 0;
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.05;
-}
+    .hero p {
+      max-width: 850px;
+      margin: 20px auto 0;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #e0f2fe;
+    }
 
-.hero p {
-  max-width: 850px;
-  margin: 20px auto 0;
-  font-size: 20px;
-  line-height: 1.6;
-  color: #e0f2fe;
-}
+    .datos {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
 
-.datos {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 26px;
-}
+    .dato-hero {
+      padding: 11px 18px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: white;
+      font-weight: bold;
+    }
 
-.dato-hero {
-  padding: 11px 18px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  color: white;
-  font-weight: bold;
-}
+    .acciones {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
 
-.acciones {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      background: var(--azul);
+      color: white;
+      border: none;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+      transition: 0.25s ease;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 13px 22px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  background: var(--azul);
-  color: white;
-  border: none;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
-  transition: 0.25s ease;
-}
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #1d4ed8;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-  background: #1d4ed8;
-}
+    .btn.secundario {
+      background: white;
+      color: var(--azul-oscuro);
+    }
 
-.btn.secundario {
-  background: white;
-  color: var(--azul-oscuro);
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #0f172a;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    }
 
-/* MENU */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: #0f172a;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
-}
+    .nav-contenido {
+      max-width: 1180px;
+      margin: auto;
+      padding: 15px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
 
-.nav-contenido {
-  max-width: 1180px;
-  margin: auto;
-  padding: 15px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
+    .nav-contenido strong {
+      color: white;
+    }
 
-.nav-contenido strong {
-  color: white;
-}
+    .nav-links a {
+      color: #dbeafe;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 18px;
+      font-size: 14px;
+    }
 
-.nav-links a {
-  color: #dbeafe;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 18px;
-  font-size: 14px;
-}
+    .nav-links a:hover {
+      color: var(--celeste);
+    }
 
-.nav-links a:hover {
-  color: var(--celeste);
-}
+    main {
+      max-width: 1180px;
+      margin: 40px auto 60px;
+      padding: 0 24px;
+    }
 
-/* CONTENIDO */
-main {
-  max-width: 1180px;
-  margin: 40px auto 60px;
-  padding: 0 24px;
-}
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 34px;
+    }
 
-.tarjetas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-bottom: 34px;
-}
+    .tarjeta {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--sombra);
+    }
 
-.tarjeta {
-  background: white;
-  border: 1px solid var(--borde);
-  border-radius: 22px;
-  padding: 26px;
-  box-shadow: var(--sombra);
-}
+    .numero {
+      width: 50px;
+      height: 50px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 23px;
+      margin-bottom: 16px;
+    }
 
-.numero {
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  display: grid;
-  place-items: center;
-  color: white;
-  font-weight: bold;
-  font-size: 23px;
-  margin-bottom: 16px;
-}
+    .tarjeta h3 {
+      margin: 0 0 10px;
+      color: var(--azul-oscuro);
+      font-size: 22px;
+    }
 
-.tarjeta h3 {
-  margin: 0 0 10px;
-  color: var(--azul-oscuro);
-  font-size: 22px;
-}
+    .tarjeta p {
+      margin: 0;
+      color: var(--gris);
+      line-height: 1.55;
+    }
 
-.tarjeta p {
-  margin: 0;
-  color: var(--gris);
-  line-height: 1.55;
-}
+    section {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 24px;
+      padding: 32px;
+      margin: 32px 0;
+      box-shadow: var(--sombra);
+    }
 
-/* SECCIONES */
-section {
-  background: white;
-  border: 1px solid var(--borde);
-  border-radius: 24px;
-  padding: 32px;
-  margin: 32px 0;
-  box-shadow: var(--sombra);
-}
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 26px;
+    }
 
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: flex-start;
-  margin-bottom: 26px;
-}
+    .section-head h2 {
+      margin: 0;
+      color: var(--azul-oscuro);
+      font-size: clamp(27px, 3vw, 38px);
+    }
 
-.section-head h2 {
-  margin: 0;
-  color: var(--azul-oscuro);
-  font-size: clamp(27px, 3vw, 38px);
-}
+    .section-head p {
+      margin: 12px 0 0;
+      color: var(--gris);
+      line-height: 1.65;
+      max-width: 820px;
+    }
 
-.section-head p {
-  margin: 12px 0 0;
-  color: var(--gris);
-  line-height: 1.65;
-  max-width: 820px;
-}
+    .tag {
+      white-space: nowrap;
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: var(--azul);
+      font-size: 13px;
+      font-weight: bold;
+    }
 
-.tag {
-  white-space: nowrap;
-  padding: 10px 15px;
-  border-radius: 999px;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  color: var(--azul);
-  font-size: 13px;
-  font-weight: bold;
-}
+    .grid-dos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
 
-/* IMAGENES */
-.grid-dos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
+    .evidencia {
+      background: #f8fafc;
+      border: 1px solid var(--borde);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.25s ease;
+    }
 
-.evidencia {
-  background: #f8fafc;
-  border: 1px solid var(--borde);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: 0.25s ease;
-}
+    .evidencia:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+    }
 
-.evidencia:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
-}
+    .evidencia img {
+      width: 100%;
+      height: 340px;
+      display: block;
+      object-fit: contain;
+      background: #e2e8f0;
+      padding: 12px;
+    }
 
-.evidencia img {
-  width: 100%;
-  height: 340px;
-  display: block;
-  object-fit: contain;
-  background: #e2e8f0;
-  padding: 12px;
-}
+    .evidencia .contenido {
+      padding: 17px 18px;
+    }
 
-.evidencia .contenido {
-  padding: 17px 18px;
-}
+    .evidencia h4 {
+      margin: 0 0 8px;
+      color: var(--azul-oscuro);
+      font-size: 18px;
+    }
 
-.evidencia h4 {
-  margin: 0 0 8px;
-  color: var(--azul-oscuro);
-  font-size: 18px;
-}
+    .evidencia p {
+      margin: 0;
+      color: var(--gris);
+      line-height: 1.45;
+      font-size: 14px;
+    }
 
-.evidencia p {
-  margin: 0;
-  color: var(--gris);
-  line-height: 1.45;
-  font-size: 14px;
-}
+    .info-lista {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
 
-/* DATOS */
-.info-lista {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
+    .info {
+      background: #f8fafc;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 17px;
+    }
 
-.info {
-  background: #f8fafc;
-  border: 1px solid var(--borde);
-  border-radius: 16px;
-  padding: 17px;
-}
+    .info b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--azul-oscuro);
+    }
 
-.info b {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--azul-oscuro);
-}
+    .info span {
+      color: var(--gris);
+      line-height: 1.45;
+      font-size: 14px;
+    }
 
-.info span {
-  color: var(--gris);
-  line-height: 1.45;
-  font-size: 14px;
-}
+    .descargas {
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--borde);
+    }
 
-.nota {
-  margin-top: 18px;
-  padding: 16px 18px;
-  border-radius: 16px;
-  background: #fff7ed;
-  border: 1px solid #fed7aa;
-  color: #9a3412;
-  line-height: 1.55;
-}
+    .descargas h3 {
+      margin: 0 0 14px;
+      color: var(--azul-oscuro);
+      font-size: 20px;
+    }
 
-/* CONCLUSION */
-.final {
-  text-align: center;
-  background: linear-gradient(135deg, #0f172a, #1d4ed8);
-  color: white;
-}
+    .botones-descarga {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.final h2 {
-  color: white;
-  margin-bottom: 12px;
-}
+    .btn-descarga {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: 0.25s ease;
+    }
 
-.final p {
-  color: #dbeafe;
-  max-width: 820px;
-  margin: auto;
-  line-height: 1.6;
-}
+    .btn-descarga:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 34px 22px;
-  background: #0f172a;
-  color: #cbd5e1;
-}
+    .btn-descarga.exe {
+      background: var(--azul);
+    }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  header {
-    min-height: 70vh;
-  }
+    .btn-descarga.zip {
+      background: var(--verde);
+    }
 
-  .tarjetas,
-  .grid-dos,
-  .info-lista {
-    grid-template-columns: 1fr;
-  }
+    .btn-descarga.pdf {
+      background: var(--rojo);
+    }
 
-  .section-head {
-    flex-direction: column;
-  }
+    .btn-descarga.video {
+      background: var(--morado);
+    }
 
-  .nav-contenido {
-    display: block;
-    text-align: center;
-  }
+    .nota {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      line-height: 1.55;
+    }
 
-  .nav-links a {
-    display: inline-block;
-    margin: 10px 8px 0;
-  }
+    .final {
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+    }
 
-  .evidencia img {
-    height: 280px;
-  }
-}
-.descargas {
-  margin-top: 24px;
-  padding: 22px;
-  border-radius: 20px;
-  background: #f8fafc;
-  border: 1px solid var(--borde);
-}
+    .final h2 {
+      color: white;
+      margin-bottom: 12px;
+    }
 
-.descargas h3 {
-  margin: 0 0 14px;
-  color: var(--azul-oscuro);
-  font-size: 20px;
-}
+    .final p {
+      color: #dbeafe;
+      max-width: 820px;
+      margin: auto;
+      line-height: 1.6;
+    }
 
-.botones-descarga {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
+    footer {
+      text-align: center;
+      padding: 34px 22px;
+      background: #0f172a;
+      color: #cbd5e1;
+    }
 
-.btn-descarga {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  background: var(--azul);
-  color: white;
-  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
-  transition: 0.25s ease;
-}
+    @media (max-width: 900px) {
+      header {
+        min-height: 70vh;
+      }
 
-.btn-descarga:hover {
-  transform: translateY(-2px);
-  background: #1d4ed8;
-}
+      .tarjetas,
+      .grid-dos,
+      .info-lista {
+        grid-template-columns: 1fr;
+      }
 
-.btn-descarga.pdf {
-  background: #dc2626;
-}
+      .section-head {
+        flex-direction: column;
+      }
 
-.btn-descarga.video {
-  background: #7c3aed;
-}
+      .nav-contenido {
+        display: block;
+        text-align: center;
+      }
 
-.btn-descarga.zip {
-  background: #16a34a;
-}
+      .nav-links a {
+        display: inline-block;
+        margin: 10px 8px 0;
+      }
+
+      .evidencia img {
+        height: 280px;
+      }
+    }
   </style>
 </head>
 
@@ -465,8 +456,8 @@ footer {
       </div>
 
       <div class="acciones">
-        <a href="#ejercicio1" class="btn">Ver ejercicios</a>
-        <a href="webgl.html" class="btn secundario">Abrir WebGL</a>
+        <a href="#ejercicio1" class="btn secundario">Ver ejercicios</a>
+        <a href="webgl.html" class="btn">Abrir WebGL</a>
       </div>
     </div>
   </header>
@@ -529,7 +520,7 @@ footer {
 
       <div class="grid-dos">
         <article class="evidencia">
-          <img src="img/image1_2.png" alt="Imagen original para clasificación de texturas">
+          <img src="img/image1.png" alt="Imagen original para clasificación de texturas">
 
           <div class="contenido">
             <h4>Imagen cargada</h4>
@@ -540,7 +531,7 @@ footer {
         </article>
 
         <article class="evidencia">
-          <img src="img/image1.png" alt="Resultado de clasificación de texturas">
+          <img src="img/image1_2.png" alt="Resultado de clasificación de texturas">
 
           <div class="contenido">
             <h4>Resultado clasificado</h4>
@@ -565,6 +556,24 @@ footer {
         <div class="info">
           <b>Salida</b>
           <span>Imagen procesada con colores representativos de cada textura.</span>
+        </div>
+      </div>
+
+      <div class="descargas">
+        <h3>Archivos del Ejercicio 1</h3>
+
+        <div class="botones-descarga">
+          <a href="ejercicio1/EJERCICIO1_SIN%20BD.exe" class="btn-descarga exe" download>
+            Descargar ejecutable EXE
+          </a>
+
+          <a href="ejercicio1/EJERCICIO1_SIN%20BD.zip" class="btn-descarga zip" download>
+            Descargar ZIP del proyecto
+          </a>
+
+          <a href="PDF/INSTALACION%20Y%20DOCUEMNTACION%20INDIVIDUAL%20RONALDO%20CHARCA%20CONDORI.pdf" class="btn-descarga pdf" target="_blank">
+            Ver documentación PDF
+          </a>
         </div>
       </div>
     </section>
@@ -595,7 +604,7 @@ footer {
         </article>
 
         <article class="evidencia">
-          <img src="img/image.png" alt="Resultado del filtro de suavizado">
+          <img src="img/image2_2.png" alt="Resultado del filtro de suavizado">
 
           <div class="contenido">
             <h4>Imagen suavizada</h4>
@@ -620,6 +629,24 @@ footer {
         <div class="info">
           <b>Salida</b>
           <span>Imagen con menor ruido y apariencia visual más suave.</span>
+        </div>
+      </div>
+
+      <div class="descargas">
+        <h3>Archivos del Ejercicio 2</h3>
+
+        <div class="botones-descarga">
+          <a href="ejercicio2/EJERCICIO2.exe" class="btn-descarga exe" download>
+            Descargar ejecutable EXE
+          </a>
+
+          <a href="ejercicio2/EJERCICIO2.zip" class="btn-descarga zip" download>
+            Descargar ZIP del proyecto
+          </a>
+
+          <a href="PDF/INSTALACION%20Y%20DOCUEMNTACION%20INDIVIDUAL%20RONALDO%20CHARCA%20CONDORI.pdf" class="btn-descarga pdf" target="_blank">
+            Ver documentación PDF
+          </a>
         </div>
       </div>
     </section>
@@ -656,16 +683,41 @@ footer {
       </div>
 
       <div class="acciones" style="justify-content: flex-start;">
-        <a href="webgl.html" class="btn">Abrir proyecto WebGL</a>
+        <a href="webgl.html" class="btn">
+          Abrir proyecto WebGL
+        </a>
+      </div>
+
+      <div class="descargas">
+        <h3>Archivos del Ejercicio 3</h3>
+
+        <div class="botones-descarga">
+          <a href="ejercicio3/EJERCICIO3.zip" class="btn-descarga zip" download>
+            Descargar ZIP del WebGL
+          </a>
+
+          <a href="ejercicio3/LAVACALOLA.mp4" class="btn-descarga video" target="_blank">
+            Ver video MP4
+          </a>
+
+          <a href="PDF/INSTALACION%20Y%20DOCUEMNTACION%20INDIVIDUAL%20RONALDO%20CHARCA%20CONDORI.pdf" class="btn-descarga pdf" target="_blank">
+            Ver documentación PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="nota">
+        <strong>Nota:</strong> El WebGL no se carga automáticamente en esta página.
+        Solo se ejecuta cuando se presiona el botón <strong>Abrir proyecto WebGL</strong>.
       </div>
     </section>
 
     <section class="final">
       <h2>Conclusión</h2>
       <p>
-        La página integra la evidencia visual de los ejercicios realizados en Visual Studio 2012
-        y permite abrir el producto multimedia desarrollado en Unity WebGL desde una pantalla
-        independiente, manteniendo una presentación clara y ordenada.
+        La página integra la evidencia visual de los ejercicios realizados en Visual Studio 2012,
+        permite descargar los ejecutables, archivos ZIP y documentación correspondiente,
+        además de abrir el producto multimedia desarrollado en Unity WebGL desde una pantalla independiente.
       </p>
     </section>
 
