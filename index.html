@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Proyecto Individual Multimedia - Ronaldo Charca Condori</title>
+
+  <style>
+:root {
+  --azul-oscuro: #0f172a;
+  --azul: #2563eb;
+  --celeste: #38bdf8;
+  --verde: #16a34a;
+  --naranja: #f59e0b;
+  --morado: #7c3aed;
+  --fondo: #f1f5f9;
+  --texto: #1e293b;
+  --gris: #64748b;
+  --borde: #dbe3ef;
+  --sombra: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+/* PORTADA */
+header {
+  min-height: 58vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 24px;
+  color: white;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(37, 99, 235, 0.78)),
+    url("img/image1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+header::after {
+  display: none;
+}
+
+.hero {
+  max-width: 950px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #e0f2fe;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+}
+
+.hero p {
+  max-width: 850px;
+  margin: 20px auto 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #e0f2fe;
+}
+
+.datos {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.dato-hero {
+  padding: 11px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: white;
+  font-weight: bold;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  background: var(--azul);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+}
+
+.btn.secundario {
+  background: white;
+  color: var(--azul-oscuro);
+}
+
+/* MENU */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #0f172a;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+}
+
+.nav-contenido {
+  max-width: 1180px;
+  margin: auto;
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav-contenido strong {
+  color: white;
+}
+
+.nav-links a {
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--celeste);
+}
+
+/* CONTENIDO */
+main {
+  max-width: 1180px;
+  margin: 40px auto 60px;
+  padding: 0 24px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 34px;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--sombra);
+}
+
+.numero {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+
+.tarjeta h3 {
+  margin: 0 0 10px;
+  color: var(--azul-oscuro);
+  font-size: 22px;
+}
+
+.tarjeta p {
+  margin: 0;
+  color: var(--gris);
+  line-height: 1.55;
+}
+
+/* SECCIONES */
+section {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 24px;
+  padding: 32px;
+  margin: 32px 0;
+  box-shadow: var(--sombra);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+
+.section-head h2 {
+  margin: 0;
+  color: var(--azul-oscuro);
+  font-size: clamp(27px, 3vw, 38px);
+}
+
+.section-head p {
+  margin: 12px 0 0;
+  color: var(--gris);
+  line-height: 1.65;
+  max-width: 820px;
+}
+
+.tag {
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius: 999px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: var(--azul);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* IMAGENES */
+.grid-dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.evidencia {
+  background: #f8fafc;
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.evidencia:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
+.evidencia img {
+  width: 100%;
+  height: 340px;
+  display: block;
+  object-fit: contain;
+  background: #e2e8f0;
+  padding: 12px;
+}
+
+.evidencia .contenido {
+  padding: 17px 18px;
+}
+
+.evidencia h4 {
+  margin: 0 0 8px;
+  color: var(--azul-oscuro);
+  font-size: 18px;
+}
+
+.evidencia p {
+  margin: 0;
+  color: var(--gris);
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+/* DATOS */
+.info-lista {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.info {
+  background: #f8fafc;
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 17px;
+}
+
+.info b {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--azul-oscuro);
+}
+
+.info span {
+  color: var(--gris);
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.nota {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+  line-height: 1.55;
+}
+
+/* CONCLUSION */
+.final {
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: white;
+}
+
+.final h2 {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.final p {
+  color: #dbeafe;
+  max-width: 820px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 34px 22px;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  header {
+    min-height: 70vh;
+  }
+
+  .tarjetas,
+  .grid-dos,
+  .info-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .section-head {
+    flex-direction: column;
+  }
+
+  .nav-contenido {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    margin: 10px 8px 0;
+  }
+
+  .evidencia img {
+    height: 280px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <span class="badge">INF-263 | Desarrollo de Aplicaciones Multimedia</span>
+
+      <h1>Proyecto Individual Multimedia</h1>
+
+      <p>
+        Presentación web de los tres ejercicios desarrollados: clasificación de texturas,
+        filtro de suavizado 3 x 3 y producción multimedia en Unity exportada a WebGL.
+      </p>
+
+      <div class="datos">
+        <div class="dato-hero">Ronaldo Charca Condori</div>
+        <div class="dato-hero">CI: 10070215</div>
+        <div class="dato-hero">UMSA - Informática</div>
+      </div>
+
+      <div class="acciones">
+        <a href="#ejercicio1" class="btn">Ver ejercicios</a>
+        <a href="webgl.html" class="btn secundario">Abrir WebGL</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-contenido">
+      <strong>Ronaldo Charca Condori | CI: 10070215</strong>
+
+      <div class="nav-links">
+        <a href="#ejercicio1">Texturas</a>
+        <a href="#ejercicio2">Suavizado</a>
+        <a href="#webgl">Unity WebGL</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="tarjetas">
+      <div class="tarjeta">
+        <div class="numero" style="background: var(--verde);">1</div>
+        <h3>Clasificación de Texturas</h3>
+        <p>
+          Aplicación de escritorio realizada en C# con Windows Forms para identificar
+          superficies mediante colores RGB.
+        </p>
+      </div>
+
+      <div class="tarjeta">
+        <div class="numero" style="background: var(--naranja);">2</div>
+        <h3>Filtro de Suavizado</h3>
+        <p>
+          Procesamiento de imagen usando una ventana de 3 x 3 píxeles para reducir ruido
+          y suavizar transiciones.
+        </p>
+      </div>
+
+      <div class="tarjeta">
+        <div class="numero" style="background: var(--morado);">3</div>
+        <h3>Cover Animado en Unity</h3>
+        <p>
+          Escena 3D con personajes, música y animación sincronizada exportada en formato WebGL.
+        </p>
+      </div>
+    </div>
+
+    <section id="ejercicio1">
+      <div class="section-head">
+        <div>
+          <h2>Ejercicio 1: Clasificación de Texturas</h2>
+          <p>
+            Este ejercicio permite cargar una imagen y clasificar visualmente superficies
+            como césped, agua, tierra, asfalto o cemento. La aplicación fue desarrollada
+            en Visual Studio 2012 con C# y Windows Forms.
+          </p>
+        </div>
+
+        <span class="tag">Visual Studio 2012 | C#</span>
+      </div>
+
+      <div class="grid-dos">
+        <article class="evidencia">
+          <img src="img/image1_2.png" alt="Imagen original para clasificación de texturas">
+
+          <div class="contenido">
+            <h4>Imagen cargada</h4>
+            <p>
+              Captura del programa mostrando la imagen original seleccionada por el usuario.
+            </p>
+          </div>
+        </article>
+
+        <article class="evidencia">
+          <img src="img/image1.png" alt="Resultado de clasificación de texturas">
+
+          <div class="contenido">
+            <h4>Resultado clasificado</h4>
+            <p>
+              Captura del resultado obtenido después de aplicar la clasificación por colores.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="info-lista">
+        <div class="info">
+          <b>Entrada</b>
+          <span>Imagen en formato JPG, PNG o BMP.</span>
+        </div>
+
+        <div class="info">
+          <b>Proceso</b>
+          <span>Lectura píxel por píxel y comparación de valores RGB.</span>
+        </div>
+
+        <div class="info">
+          <b>Salida</b>
+          <span>Imagen procesada con colores representativos de cada textura.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="ejercicio2">
+      <div class="section-head">
+        <div>
+          <h2>Ejercicio 2: Filtro de Suavizado 3 x 3</h2>
+          <p>
+            Este ejercicio aplica un filtro de promedio utilizando una ventana de 3 x 3 píxeles.
+            El objetivo es reducir el ruido visual y suavizar las transiciones de color en la imagen.
+          </p>
+        </div>
+
+        <span class="tag">Procesamiento de Imágenes</span>
+      </div>
+
+      <div class="grid-dos">
+        <article class="evidencia">
+          <img src="img/image2.png" alt="Imagen original para filtro de suavizado">
+
+          <div class="contenido">
+            <h4>Imagen original</h4>
+            <p>
+              Captura del programa antes de aplicar el filtro de suavizado.
+            </p>
+          </div>
+        </article>
+
+        <article class="evidencia">
+          <img src="img/image.png" alt="Resultado del filtro de suavizado">
+
+          <div class="contenido">
+            <h4>Imagen suavizada</h4>
+            <p>
+              Captura del resultado después de aplicar el promedio de vecinos con matriz 3 x 3.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="info-lista">
+        <div class="info">
+          <b>Entrada</b>
+          <span>Imagen seleccionada desde el equipo.</span>
+        </div>
+
+        <div class="info">
+          <b>Proceso</b>
+          <span>Promedio de los valores RGB de los nueve píxeles vecinos.</span>
+        </div>
+
+        <div class="info">
+          <b>Salida</b>
+          <span>Imagen con menor ruido y apariencia visual más suave.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="webgl">
+      <div class="section-head">
+        <div>
+          <h2>Ejercicio 3: Cover Animado en Unity WebGL</h2>
+          <p>
+            Este ejercicio corresponde a una escena desarrollada en Unity 3D, donde varios
+            personajes realizan una coreografía sincronizada con música. La escena fue exportada
+            a WebGL para ejecutarse desde un navegador web.
+          </p>
+        </div>
+
+        <span class="tag">Unity 3D | WebGL</span>
+      </div>
+
+      <div class="info-lista">
+        <div class="info">
+          <b>Tipo de producto</b>
+          <span>Animación 3D sincronizada con música.</span>
+        </div>
+
+        <div class="info">
+          <b>Herramienta</b>
+          <span>Unity 3D exportado a WebGL.</span>
+        </div>
+
+        <div class="info">
+          <b>Ejecución</b>
+          <span>Se abre en una pantalla independiente.</span>
+        </div>
+      </div>
+
+      <div class="acciones" style="justify-content: flex-start;">
+        <a href="webgl.html" class="btn">Abrir proyecto WebGL</a>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2>Conclusión</h2>
+      <p>
+        La página integra la evidencia visual de los ejercicios realizados en Visual Studio 2012
+        y permite abrir el producto multimedia desarrollado en Unity WebGL desde una pantalla
+        independiente, manteniendo una presentación clara y ordenada.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Universidad Mayor de San Andrés | Carrera de Informática | INF-263
+      <br>
+      Ronaldo Charca Condori | CI: 10070215
+    </p>
+  </footer>
+
+</body>
+</html>
